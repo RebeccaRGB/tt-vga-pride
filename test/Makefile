@@ -6,6 +6,16 @@ SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
 PROJECT_SOURCES = project.v
+PROJECT_SOURCES += hvsync_generator.v
+PROJECT_SOURCES += flag_index.v
+PROJECT_SOURCES += flag_rainbow_6.v
+PROJECT_SOURCES += flag_rainbow_7.v
+PROJECT_SOURCES += flag_rainbow_8.v
+PROJECT_SOURCES += flag_rainbow_9.v
+PROJECT_SOURCES += flag_rainbow_philly.v
+PROJECT_SOURCES += flag_rainbow_progress.v
+PROJECT_SOURCES += flag_rainbow_progress_2021.v
+PROJECT_SOURCES += flag_trans.v
 
 ifneq ($(GATES),yes)
 

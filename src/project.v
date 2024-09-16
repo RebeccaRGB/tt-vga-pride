@@ -1,11 +1,12 @@
 /*
- * Copyright (c) 2024 Your Name
+ * Copyright (c) 2024 Rebecca G. Bettencourt
+ * Original idea by Foone Turing
  * SPDX-License-Identifier: Apache-2.0
  */
 
 `default_nettype none
 
-module tt_um_example (
+module tt_um_rebeccargb_vga_pride (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -16,12 +17,55 @@ module tt_um_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
+  // VGA signals
+  wire hsync;
+  wire vsync;
+  wire [1:0] R;
+  wire [1:0] G;
+  wire [1:0] B;
+  wire video_active;
+  wire [9:0] pix_x;
+  wire [9:0] pix_y;
+
+  // TinyVGA PMOD
+  assign uo_out = {hsync, B[0], G[0], R[0], vsync, B[1], G[1], R[1]};
+
+  // Unused outputs assigned to 0.
   assign uio_out = 0;
   assign uio_oe  = 0;
 
-  // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+  // Suppress unused signals warning
+  wire _unused_ok = &{ena, ui_in};
+
+  hvsync_generator hvsync_gen(
+    .clk(clk),
+    .reset(~rst_n),
+    .hsync(hsync),
+    .vsync(vsync),
+    .display_on(video_active),
+    .hpos(pix_x),
+    .vpos(pix_y)
+  );
+
+  reg [7:0] counter;
+  always @(posedge ui_in[7] or posedge ui_in[6] or posedge ui_in[5] or posedge ui_in[4]) begin
+    if (ui_in[7]) begin
+      counter <= 0;
+    end else if (ui_in[6]) begin
+      counter <= ((counter + 1) < count) ? (counter + 1) : 0;
+    end else if (ui_in[5]) begin
+      counter <= ((counter > 0) ? counter : count) - 1;
+    end else if (ui_in[4]) begin
+      counter <= uio_in % count;
+    end
+  end
+
+  wire [5:0] color;
+  wire [7:0] count;
+  flag_index flag((ui_in[0] ? uio_in : counter), pix_x, pix_y, color, count);
+
+  assign R = video_active ? color[5:4] : 2'b00;
+  assign G = video_active ? color[3:2] : 2'b00;
+  assign B = video_active ? color[1:0] : 2'b00;
 
 endmodule
