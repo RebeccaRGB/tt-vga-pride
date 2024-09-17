@@ -114,6 +114,33 @@ module flag_index (
   wire [5:0] flag_disability_rainbow_color;
   flag_disability_rainbow flag_disability_rainbow_inst(pix_x, pix_y, flag_disability_rainbow_color);
 
+  wire [5:0] flag_gender_neutral_color;
+  flag_gender_neutral flag_gender_neutral_inst(pix_x, pix_y, flag_gender_neutral_color);
+
+  wire [5:0] flag_genderfluid_color;
+  flag_genderfluid flag_genderfluid_inst(pix_x, pix_y, flag_genderfluid_color);
+
+  wire [5:0] flag_genderflux_color;
+  flag_genderflux flag_genderflux_inst(pix_x, pix_y, flag_genderflux_color);
+
+  wire [5:0] flag_genderqueer_color;
+  flag_genderqueer flag_genderqueer_inst(pix_x, pix_y, flag_genderqueer_color);
+
+  wire [5:0] flag_greygender_color;
+  flag_greygender flag_greygender_inst(pix_x, pix_y, flag_greygender_color);
+
+  wire [5:0] flag_greysexual_color;
+  flag_greysexual flag_greysexual_inst(pix_x, pix_y, flag_greysexual_color);
+
+  wire [5:0] flag_gynosexual_color;
+  flag_gynosexual flag_gynosexual_inst(pix_x, pix_y, flag_gynosexual_color);
+
+  wire [5:0] flag_intersex_v1_color;
+  flag_intersex_v1 flag_intersex_v1_inst(pix_x, pix_y, flag_intersex_v1_color);
+
+  wire [5:0] flag_intersex_v2_color;
+  flag_intersex_v2 flag_intersex_v2_inst(pix_x, pix_y, flag_intersex_v2_color);
+
   always @(selector) begin
     case (selector)
       8'd0: color = flag_rainbow_6_color;
@@ -152,10 +179,19 @@ module flag_index (
       8'd33: color = flag_demisexual_color;
       8'd34: color = flag_disability_tricolor_color;
       8'd35: color = flag_disability_rainbow_color;
+      8'd36: color = flag_gender_neutral_color;
+      8'd37: color = flag_genderfluid_color;
+      8'd38: color = flag_genderflux_color;
+      8'd39: color = flag_genderqueer_color;
+      8'd40: color = flag_greygender_color;
+      8'd41: color = flag_greysexual_color;
+      8'd42: color = flag_gynosexual_color;
+      8'd43: color = flag_intersex_v1_color;
+      8'd44: color = flag_intersex_v2_color;
       default: color = 0;
     endcase
   end
 
-  assign count = 8'd36;
+  assign count = 8'd45;
 
 endmodule

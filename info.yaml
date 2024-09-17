@@ -56,6 +56,15 @@ project:
     - "flag_demisexual.v"
     - "flag_disability_tricolor.v"
     - "flag_disability_rainbow.v"
+    - "flag_gender_neutral.v"
+    - "flag_genderfluid.v"
+    - "flag_genderflux.v"
+    - "flag_genderqueer.v"
+    - "flag_greygender.v"
+    - "flag_greysexual.v"
+    - "flag_gynosexual.v"
+    - "flag_intersex_v1.v"
+    - "flag_intersex_v2.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:

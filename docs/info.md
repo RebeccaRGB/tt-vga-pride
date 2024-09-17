@@ -52,6 +52,15 @@ Connect to a VGA monitor. Set the following inputs to change the displayed flag:
 | 33    | Demisexual pride flag                                        |
 | 34    | Disability rights flag (gold silver bronze tricolor)         |
 | 35    | Disability rainbow flag                                      |
+| 36    | Gender-neutral pride flag                                    |
+| 37    | Genderfluid pride flag                                       |
+| 38    | Genderflux pride flag                                        |
+| 39    | Genderqueer pride flag                                       |
+| 40    | Greygender pride flag                                        |
+| 41    | Greysexual pride flag                                        |
+| 42    | Gynosexual pride flag                                        |
+| 43    | Intersex pride flag (purple circle)                          |
+| 44    | Intersex pride flag (blue/pink gradient)                     |
 
 ## External hardware
 
