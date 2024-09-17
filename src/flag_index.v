@@ -141,6 +141,27 @@ module flag_index (
   wire [5:0] flag_intersex_v2_color;
   flag_intersex_v2 flag_intersex_v2_inst(pix_x, pix_y, flag_intersex_v2_color);
 
+  wire [5:0] flag_lesbian_thislesbianlife_color;
+  flag_lesbian_thislesbianlife flag_lesbian_thislesbianlife_inst(pix_x, pix_y, flag_lesbian_thislesbianlife_color);
+
+  wire [5:0] flag_lesbian_sadlesbeandisaster_7_color;
+  flag_lesbian_sadlesbeandisaster_7 flag_lesbian_sadlesbeandisaster_7_inst(pix_x, pix_y, flag_lesbian_sadlesbeandisaster_7_color);
+
+  wire [5:0] flag_lesbian_sadlesbeandisaster_5_color;
+  flag_lesbian_sadlesbeandisaster_5 flag_lesbian_sadlesbeandisaster_5_inst(pix_x, pix_y, flag_lesbian_sadlesbeandisaster_5_color);
+
+  wire [5:0] flag_lesbian_lydiandragon_color;
+  flag_lesbian_lydiandragon flag_lesbian_lydiandragon_inst(pix_x, pix_y, flag_lesbian_lydiandragon_color);
+
+  wire [5:0] flag_lesbian_maya_kern_color;
+  flag_lesbian_maya_kern flag_lesbian_maya_kern_inst(pix_x, pix_y, flag_lesbian_maya_kern_color);
+
+  wire [5:0] flag_lesbian_femme_color;
+  flag_lesbian_femme flag_lesbian_femme_inst(pix_x, pix_y, flag_lesbian_femme_color);
+
+  wire [5:0] flag_littleender_color;
+  flag_littleender flag_littleender_inst(pix_x, pix_y, flag_littleender_color);
+
   always @(selector) begin
     case (selector)
       8'd0: color = flag_rainbow_6_color;
@@ -188,10 +209,17 @@ module flag_index (
       8'd42: color = flag_gynosexual_color;
       8'd43: color = flag_intersex_v1_color;
       8'd44: color = flag_intersex_v2_color;
+      8'd45: color = flag_lesbian_thislesbianlife_color;
+      8'd46: color = flag_lesbian_sadlesbeandisaster_7_color;
+      8'd47: color = flag_lesbian_sadlesbeandisaster_5_color;
+      8'd48: color = flag_lesbian_lydiandragon_color;
+      8'd49: color = flag_lesbian_maya_kern_color;
+      8'd50: color = flag_lesbian_femme_color;
+      8'd51: color = flag_littleender_color;
       default: color = 0;
     endcase
   end
 
-  assign count = 8'd45;
+  assign count = 8'd52;
 
 endmodule
