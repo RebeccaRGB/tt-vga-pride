@@ -16,6 +16,18 @@ PROJECT_SOURCES += flag_rainbow_philly.v
 PROJECT_SOURCES += flag_rainbow_progress.v
 PROJECT_SOURCES += flag_rainbow_progress_2021.v
 PROJECT_SOURCES += flag_trans.v
+PROJECT_SOURCES += flag_abrosexual.v
+PROJECT_SOURCES += flag_aceflux.v
+PROJECT_SOURCES += flag_aegosexual.v
+PROJECT_SOURCES += flag_agender.v
+PROJECT_SOURCES += flag_androgyne.v
+PROJECT_SOURCES += flag_androsexual.v
+PROJECT_SOURCES += flag_aporagender.v
+PROJECT_SOURCES += flag_aroace.v
+PROJECT_SOURCES += flag_aroflux.v
+PROJECT_SOURCES += flag_aromantic.v
+PROJECT_SOURCES += flag_asexual.v
+PROJECT_SOURCES += flag_aspec.v
 
 ifneq ($(GATES),yes)
 

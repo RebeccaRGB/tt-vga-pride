@@ -30,6 +30,42 @@ module flag_index (
   wire [5:0] flag_trans_color;
   flag_trans flag_trans_inst(pix_x, pix_y, flag_trans_color);
 
+  wire [5:0] flag_abrosexual_color;
+  flag_abrosexual flag_abrosexual_inst(pix_x, pix_y, flag_abrosexual_color);
+
+  wire [5:0] flag_aceflux_color;
+  flag_aceflux flag_aceflux_inst(pix_x, pix_y, flag_aceflux_color);
+
+  wire [5:0] flag_aegosexual_color;
+  flag_aegosexual flag_aegosexual_inst(pix_x, pix_y, flag_aegosexual_color);
+
+  wire [5:0] flag_agender_color;
+  flag_agender flag_agender_inst(pix_x, pix_y, flag_agender_color);
+
+  wire [5:0] flag_androgyne_color;
+  flag_androgyne flag_androgyne_inst(pix_x, pix_y, flag_androgyne_color);
+
+  wire [5:0] flag_androsexual_color;
+  flag_androsexual flag_androsexual_inst(pix_x, pix_y, flag_androsexual_color);
+
+  wire [5:0] flag_aporagender_color;
+  flag_aporagender flag_aporagender_inst(pix_x, pix_y, flag_aporagender_color);
+
+  wire [5:0] flag_aroace_color;
+  flag_aroace flag_aroace_inst(pix_x, pix_y, flag_aroace_color);
+
+  wire [5:0] flag_aroflux_color;
+  flag_aroflux flag_aroflux_inst(pix_x, pix_y, flag_aroflux_color);
+
+  wire [5:0] flag_aromantic_color;
+  flag_aromantic flag_aromantic_inst(pix_x, pix_y, flag_aromantic_color);
+
+  wire [5:0] flag_asexual_color;
+  flag_asexual flag_asexual_inst(pix_x, pix_y, flag_asexual_color);
+
+  wire [5:0] flag_aspec_color;
+  flag_aspec flag_aspec_inst(pix_x, pix_y, flag_aspec_color);
+
   always @(selector) begin
     case (selector)
       8'd0: color = flag_rainbow_6_color;
@@ -40,10 +76,22 @@ module flag_index (
       8'd5: color = flag_rainbow_progress_color;
       8'd6: color = flag_rainbow_progress_2021_color;
       8'd7: color = flag_trans_color;
+      8'd8: color = flag_abrosexual_color;
+      8'd9: color = flag_aceflux_color;
+      8'd10: color = flag_aegosexual_color;
+      8'd11: color = flag_agender_color;
+      8'd12: color = flag_androgyne_color;
+      8'd13: color = flag_androsexual_color;
+      8'd14: color = flag_aporagender_color;
+      8'd15: color = flag_aroace_color;
+      8'd16: color = flag_aroflux_color;
+      8'd17: color = flag_aromantic_color;
+      8'd18: color = flag_asexual_color;
+      8'd19: color = flag_aspec_color;
       default: color = 0;
     endcase
   end
 
-  assign count = 8'd8;
+  assign count = 8'd20;
 
 endmodule

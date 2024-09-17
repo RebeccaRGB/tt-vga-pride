@@ -24,6 +24,18 @@ Connect to a VGA monitor. Set the following inputs to change the displayed flag:
 | 5     | Progress rainbow flag                    |
 | 6     | Progress rainbow flag 2021 version       |
 | 7     | Trans pride flag                         |
+| 8     | Abrosexual pride flag                    |
+| 9     | Aceflux pride flag                       |
+| 10    | Aegosexual pride flag                    |
+| 11    | Agender pride flag                       |
+| 12    | Androgyne pride flag                     |
+| 13    | Androsexual pride flag                   |
+| 14    | Aporagender pride flag                   |
+| 15    | Aroace pride flag                        |
+| 16    | Aroflux pride flag                       |
+| 17    | Aromantic pride flag                     |
+| 18    | Asexual pride flag                       |
+| 19    | Aspec pride flag                         |
 
 ## External hardware
 

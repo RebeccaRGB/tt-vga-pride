@@ -28,6 +28,18 @@ project:
     - "flag_rainbow_progress.v"
     - "flag_rainbow_progress_2021.v"
     - "flag_trans.v"
+    - "flag_abrosexual.v"
+    - "flag_aceflux.v"
+    - "flag_aegosexual.v"
+    - "flag_agender.v"
+    - "flag_androgyne.v"
+    - "flag_androsexual.v"
+    - "flag_aporagender.v"
+    - "flag_aroace.v"
+    - "flag_aroflux.v"
+    - "flag_aromantic.v"
+    - "flag_asexual.v"
+    - "flag_aspec.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
