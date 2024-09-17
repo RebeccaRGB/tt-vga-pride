@@ -40,6 +40,11 @@ project:
     - "flag_aromantic.v"
     - "flag_asexual.v"
     - "flag_aspec.v"
+    - "flag_bigender_v1.v"
+    - "flag_bigender_v2.v"
+    - "flag_bigender_v3.v"
+    - "flag_bisexual.v"
+    - "flag_ceterosexual.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:

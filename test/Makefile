@@ -28,6 +28,11 @@ PROJECT_SOURCES += flag_aroflux.v
 PROJECT_SOURCES += flag_aromantic.v
 PROJECT_SOURCES += flag_asexual.v
 PROJECT_SOURCES += flag_aspec.v
+PROJECT_SOURCES += flag_bigender_v1.v
+PROJECT_SOURCES += flag_bigender_v2.v
+PROJECT_SOURCES += flag_bigender_v3.v
+PROJECT_SOURCES += flag_bisexual.v
+PROJECT_SOURCES += flag_ceterosexual.v
 
 ifneq ($(GATES),yes)
 

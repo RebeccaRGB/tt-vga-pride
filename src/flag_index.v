@@ -66,6 +66,21 @@ module flag_index (
   wire [5:0] flag_aspec_color;
   flag_aspec flag_aspec_inst(pix_x, pix_y, flag_aspec_color);
 
+  wire [5:0] flag_bigender_v1_color;
+  flag_bigender_v1 flag_bigender_v1_inst(pix_x, pix_y, flag_bigender_v1_color);
+
+  wire [5:0] flag_bigender_v2_color;
+  flag_bigender_v2 flag_bigender_v2_inst(pix_x, pix_y, flag_bigender_v2_color);
+
+  wire [5:0] flag_bigender_v3_color;
+  flag_bigender_v3 flag_bigender_v3_inst(pix_x, pix_y, flag_bigender_v3_color);
+
+  wire [5:0] flag_bisexual_color;
+  flag_bisexual flag_bisexual_inst(pix_x, pix_y, flag_bisexual_color);
+
+  wire [5:0] flag_ceterosexual_color;
+  flag_ceterosexual flag_ceterosexual_inst(pix_x, pix_y, flag_ceterosexual_color);
+
   always @(selector) begin
     case (selector)
       8'd0: color = flag_rainbow_6_color;
@@ -88,10 +103,15 @@ module flag_index (
       8'd17: color = flag_aromantic_color;
       8'd18: color = flag_asexual_color;
       8'd19: color = flag_aspec_color;
+      8'd20: color = flag_bigender_v1_color;
+      8'd21: color = flag_bigender_v2_color;
+      8'd22: color = flag_bigender_v3_color;
+      8'd23: color = flag_bisexual_color;
+      8'd24: color = flag_ceterosexual_color;
       default: color = 0;
     endcase
   end
 
-  assign count = 8'd20;
+  assign count = 8'd25;
 
 endmodule
