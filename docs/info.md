@@ -41,6 +41,17 @@ Connect to a VGA monitor. Set the following inputs to change the displayed flag:
 | 22    | Bigender pride flag (pink yellow white purple blue)          |
 | 23    | Bisexual pride flag                                          |
 | 24    | Ceterosexual pride flag                                      |
+| 25    | Demiandrogyne pride flag (pink purple blue)                  |
+| 26    | Demiandrogyne pride flag (green white green)                 |
+| 27    | Demiboy pride flag                                           |
+| 28    | Demifluid pride flag                                         |
+| 29    | Demiflux pride flag                                          |
+| 30    | Demigender pride flag                                        |
+| 31    | Demigirl pride flag                                          |
+| 32    | Demiromantic pride flag                                      |
+| 33    | Demisexual pride flag                                        |
+| 34    | Disability rights flag (gold silver bronze tricolor)         |
+| 35    | Disability rainbow flag                                      |
 
 ## External hardware
 

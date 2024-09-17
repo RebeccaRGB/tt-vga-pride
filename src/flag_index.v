@@ -81,6 +81,39 @@ module flag_index (
   wire [5:0] flag_ceterosexual_color;
   flag_ceterosexual flag_ceterosexual_inst(pix_x, pix_y, flag_ceterosexual_color);
 
+  wire [5:0] flag_demiandrogyne_v1_color;
+  flag_demiandrogyne_v1 flag_demiandrogyne_v1_inst(pix_x, pix_y, flag_demiandrogyne_v1_color);
+
+  wire [5:0] flag_demiandrogyne_v2_color;
+  flag_demiandrogyne_v2 flag_demiandrogyne_v2_inst(pix_x, pix_y, flag_demiandrogyne_v2_color);
+
+  wire [5:0] flag_demiboy_color;
+  flag_demiboy flag_demiboy_inst(pix_x, pix_y, flag_demiboy_color);
+
+  wire [5:0] flag_demifluid_color;
+  flag_demifluid flag_demifluid_inst(pix_x, pix_y, flag_demifluid_color);
+
+  wire [5:0] flag_demiflux_color;
+  flag_demiflux flag_demiflux_inst(pix_x, pix_y, flag_demiflux_color);
+
+  wire [5:0] flag_demigender_color;
+  flag_demigender flag_demigender_inst(pix_x, pix_y, flag_demigender_color);
+
+  wire [5:0] flag_demigirl_color;
+  flag_demigirl flag_demigirl_inst(pix_x, pix_y, flag_demigirl_color);
+
+  wire [5:0] flag_demiromantic_color;
+  flag_demiromantic flag_demiromantic_inst(pix_x, pix_y, flag_demiromantic_color);
+
+  wire [5:0] flag_demisexual_color;
+  flag_demisexual flag_demisexual_inst(pix_x, pix_y, flag_demisexual_color);
+
+  wire [5:0] flag_disability_tricolor_color;
+  flag_disability_tricolor flag_disability_tricolor_inst(pix_x, pix_y, flag_disability_tricolor_color);
+
+  wire [5:0] flag_disability_rainbow_color;
+  flag_disability_rainbow flag_disability_rainbow_inst(pix_x, pix_y, flag_disability_rainbow_color);
+
   always @(selector) begin
     case (selector)
       8'd0: color = flag_rainbow_6_color;
@@ -108,10 +141,21 @@ module flag_index (
       8'd22: color = flag_bigender_v3_color;
       8'd23: color = flag_bisexual_color;
       8'd24: color = flag_ceterosexual_color;
+      8'd25: color = flag_demiandrogyne_v1_color;
+      8'd26: color = flag_demiandrogyne_v2_color;
+      8'd27: color = flag_demiboy_color;
+      8'd28: color = flag_demifluid_color;
+      8'd29: color = flag_demiflux_color;
+      8'd30: color = flag_demigender_color;
+      8'd31: color = flag_demigirl_color;
+      8'd32: color = flag_demiromantic_color;
+      8'd33: color = flag_demisexual_color;
+      8'd34: color = flag_disability_tricolor_color;
+      8'd35: color = flag_disability_rainbow_color;
       default: color = 0;
     endcase
   end
 
-  assign count = 8'd25;
+  assign count = 8'd36;
 
 endmodule

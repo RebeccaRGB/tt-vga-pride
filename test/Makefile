@@ -33,6 +33,17 @@ PROJECT_SOURCES += flag_bigender_v2.v
 PROJECT_SOURCES += flag_bigender_v3.v
 PROJECT_SOURCES += flag_bisexual.v
 PROJECT_SOURCES += flag_ceterosexual.v
+PROJECT_SOURCES += flag_demiandrogyne_v1.v
+PROJECT_SOURCES += flag_demiandrogyne_v2.v
+PROJECT_SOURCES += flag_demiboy.v
+PROJECT_SOURCES += flag_demifluid.v
+PROJECT_SOURCES += flag_demiflux.v
+PROJECT_SOURCES += flag_demigender.v
+PROJECT_SOURCES += flag_demigirl.v
+PROJECT_SOURCES += flag_demiromantic.v
+PROJECT_SOURCES += flag_demisexual.v
+PROJECT_SOURCES += flag_disability_tricolor.v
+PROJECT_SOURCES += flag_disability_rainbow.v
 
 ifneq ($(GATES),yes)
 

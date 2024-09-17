@@ -45,6 +45,17 @@ project:
     - "flag_bigender_v3.v"
     - "flag_bisexual.v"
     - "flag_ceterosexual.v"
+    - "flag_demiandrogyne_v1.v"
+    - "flag_demiandrogyne_v2.v"
+    - "flag_demiboy.v"
+    - "flag_demifluid.v"
+    - "flag_demiflux.v"
+    - "flag_demigender.v"
+    - "flag_demigirl.v"
+    - "flag_demiromantic.v"
+    - "flag_demisexual.v"
+    - "flag_disability_tricolor.v"
+    - "flag_disability_rainbow.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
