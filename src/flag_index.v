@@ -162,6 +162,27 @@ module flag_index (
   wire [5:0] flag_littleender_color;
   flag_littleender flag_littleender_inst(pix_x, pix_y, flag_littleender_color);
 
+  wire [5:0] flag_maverique_color;
+  flag_maverique flag_maverique_inst(pix_x, pix_y, flag_maverique_color);
+
+  wire [5:0] flag_mlm_leonis_ignis_color;
+  flag_mlm_leonis_ignis flag_mlm_leonis_ignis_inst(pix_x, pix_y, flag_mlm_leonis_ignis_color);
+
+  wire [5:0] flag_mlm_vincian_v1_color;
+  flag_mlm_vincian_v1 flag_mlm_vincian_v1_inst(pix_x, pix_y, flag_mlm_vincian_v1_color);
+
+  wire [5:0] flag_mlm_vincian_v2_color;
+  flag_mlm_vincian_v2 flag_mlm_vincian_v2_inst(pix_x, pix_y, flag_mlm_vincian_v2_color);
+
+  wire [5:0] flag_mlm_vincian_v3_color;
+  flag_mlm_vincian_v3 flag_mlm_vincian_v3_inst(pix_x, pix_y, flag_mlm_vincian_v3_color);
+
+  wire [5:0] flag_multigender_color;
+  flag_multigender flag_multigender_inst(pix_x, pix_y, flag_multigender_color);
+
+  wire [5:0] flag_multisexual_color;
+  flag_multisexual flag_multisexual_inst(pix_x, pix_y, flag_multisexual_color);
+
   always @(selector) begin
     case (selector)
       8'd0: color = flag_rainbow_6_color;
@@ -216,10 +237,17 @@ module flag_index (
       8'd49: color = flag_lesbian_maya_kern_color;
       8'd50: color = flag_lesbian_femme_color;
       8'd51: color = flag_littleender_color;
+      8'd52: color = flag_maverique_color;
+      8'd53: color = flag_mlm_leonis_ignis_color;
+      8'd54: color = flag_mlm_vincian_v1_color;
+      8'd55: color = flag_mlm_vincian_v2_color;
+      8'd56: color = flag_mlm_vincian_v3_color;
+      8'd57: color = flag_multigender_color;
+      8'd58: color = flag_multisexual_color;
       default: color = 0;
     endcase
   end
 
-  assign count = 8'd52;
+  assign count = 8'd59;
 
 endmodule

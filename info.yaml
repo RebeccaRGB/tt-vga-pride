@@ -72,6 +72,13 @@ project:
     - "flag_lesbian_maya_kern.v"
     - "flag_lesbian_femme.v"
     - "flag_littleender.v"
+    - "flag_maverique.v"
+    - "flag_mlm_leonis_ignis.v"
+    - "flag_mlm_vincian_v1.v"
+    - "flag_mlm_vincian_v2.v"
+    - "flag_mlm_vincian_v3.v"
+    - "flag_multigender.v"
+    - "flag_multisexual.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:

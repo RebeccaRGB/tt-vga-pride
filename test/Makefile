@@ -60,6 +60,13 @@ PROJECT_SOURCES += flag_lesbian_lydiandragon.v
 PROJECT_SOURCES += flag_lesbian_maya_kern.v
 PROJECT_SOURCES += flag_lesbian_femme.v
 PROJECT_SOURCES += flag_littleender.v
+PROJECT_SOURCES += flag_maverique.v
+PROJECT_SOURCES += flag_mlm_leonis_ignis.v
+PROJECT_SOURCES += flag_mlm_vincian_v1.v
+PROJECT_SOURCES += flag_mlm_vincian_v2.v
+PROJECT_SOURCES += flag_mlm_vincian_v3.v
+PROJECT_SOURCES += flag_multigender.v
+PROJECT_SOURCES += flag_multisexual.v
 
 ifneq ($(GATES),yes)
 

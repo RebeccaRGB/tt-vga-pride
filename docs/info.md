@@ -68,6 +68,13 @@ Connect to a VGA monitor. Set the following inputs to change the displayed flag:
 | 49    | Maya Kern lesbian pride flag (violet rose crocus dill)               |
 | 50    | RebeccaRGB femme lesbian pride flag (violet lavender pink rose)      |
 | 51    | Littleender pride flag                                               |
+| 52    | Maverique pride flag                                                 |
+| 53    | Leonis Ignis MLM pride flag (brown and blue)                         |
+| 54    | Vincian MLM pride flag, 7 stripes (green and blue)                   |
+| 55    | Vincian MLM pride flag, 5 stripes (green and blue)                   |
+| 56    | Vincian MLM pride flag (light blue and light green)                  |
+| 57    | Multigender pride flag                                               |
+| 58    | Multisexual pride flag                                               |
 
 ## External hardware
 
