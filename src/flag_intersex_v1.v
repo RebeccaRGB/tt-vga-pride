@@ -1,7 +1,7 @@
 `include "flag.vh"
 module flag_intersex_v1 `FLAG;
-  wire [9:0] cir_x = (pix_x < 320) ? (320 - pix_x) : (pix_x - 320);
-  wire [9:0] cir_y = (pix_y < 240) ? (240 - pix_y) : (pix_y - 240);
+  wire [8:0] cir_x = (pix_x < 320) ? (320 - pix_x[8:0]) : (pix_x[8:0] - 320);
+  wire [7:0] cir_y = (pix_y < 240) ? (240 - pix_y[7:0]) : (pix_y[7:0] - 240);
   wire [14:0] cir_r = (cir_x * cir_x) + (cir_y * cir_y);
   assign color = (
     (cir_x < 144 && cir_y < 144 && cir_r >= 10000 && cir_r < 20000) ? `PURPLE :
