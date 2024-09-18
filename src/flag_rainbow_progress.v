@@ -1,6 +1,6 @@
 `include "flag.vh"
 module flag_rainbow_progress `FLAG;
-  wire [9:0] tri_y = (pix_y < 240) ? pix_y : (479 - pix_y);
+  wire [7:0] tri_y = (pix_y < 240) ? pix_y[7:0] : (223 - pix_y[7:0]);
   wire [5:0] rainbow_color;
   flag_rainbow_6 rainbow(pix_x, pix_y, rainbow_color);
   assign color = (

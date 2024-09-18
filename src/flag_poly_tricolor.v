@@ -1,6 +1,6 @@
 `include "flag.vh"
 module flag_poly_tricolor `FLAG;
-  wire [9:0] tri_y = (pix_y < 160) ? (pix_y + 160) : (479 - pix_y);
+  wire [8:0] tri_y = (pix_y < 160) ? (pix_y[8:0] + 160) : (479 - pix_y[8:0]);
   wire [5:0] cir_x = (pix_x < 110) ? (46 - pix_x[5:0]) : (pix_x[5:0] - 46);
   wire [5:0] cir_y1 = (pix_y < 120) ? (56 - pix_y[5:0]) : (pix_y[5:0] - 56);
   wire [5:0] cir_y2 = (pix_y < 200) ? (8 - pix_y[5:0]) : (pix_y[5:0] - 8);
