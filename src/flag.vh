@@ -1,5 +1,5 @@
 `ifndef FLAG
-`define FLAG (input wire [9:0] pix_x, input wire [9:0] pix_y, output wire [5:0] color)
+`define FLAG (input wire [9:0] pix_x, input wire [8:0] pix_y, output wire [5:0] color)
 `define BLACK   6'b000000
 `define BROWN   6'b100100
 `define RED     6'b110000

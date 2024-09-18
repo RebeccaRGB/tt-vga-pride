@@ -47,22 +47,22 @@ module tt_um_rebeccargb_vga_pride (
     .vpos(pix_y)
   );
 
-  reg [7:0] counter;
+  reg [6:0] counter;
+  wire [6:0] max;
   always @(posedge ui_in[7] or posedge ui_in[6] or posedge ui_in[5] or posedge ui_in[4]) begin
     if (ui_in[7]) begin
       counter <= 0;
     end else if (ui_in[6]) begin
-      counter <= ((counter + 1) < count) ? (counter + 1) : 0;
+      counter <= (counter < max) ? (counter + 1) : 0;
     end else if (ui_in[5]) begin
-      counter <= ((counter > 0) ? counter : count) - 1;
+      counter <= (counter > 0) ? (counter - 1) : max;
     end else if (ui_in[4]) begin
-      counter <= uio_in % count;
+      counter <= uio_in[6:0];
     end
   end
 
   wire [5:0] color;
-  wire [7:0] count;
-  flag_index flag((ui_in[0] ? uio_in : counter), pix_x, pix_y, color, count);
+  flag_index flag((ui_in[0] ? uio_in[6:0] : counter), pix_x, pix_y[8:0], color, max);
 
   assign R = video_active ? color[5:4] : 2'b00;
   assign G = video_active ? color[3:2] : 2'b00;
