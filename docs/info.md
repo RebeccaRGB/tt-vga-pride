@@ -89,6 +89,15 @@ Connect to a VGA monitor. Set the following inputs to change the displayed flag:
 | 70    | Pomosexual pride flag                                                |
 | 71    | Proculsexual pride flag                                              |
 | 72    | IBM PS/2 pride flag                                                  |
+| 73    | Queer pride flag                                                     |
+| 74    | Trains pride flag (*Train Landscape*, Ellsworth Kelly, 1953)         |
+| 75    | Transfeminine pride flag                                             |
+| 76    | Transmasculine pride flag                                            |
+| 77    | Transneutral pride flag                                              |
+| 78    | Trigender pride flag                                                 |
+| 79    | Unlabeled pride flag                                                 |
+| 80    | Uranic pride flag                                                    |
+| 81    | Voidpunk pride flag                                                  |
 
 ## External hardware
 

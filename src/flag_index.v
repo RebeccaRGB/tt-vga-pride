@@ -225,6 +225,33 @@ module flag_index (
   wire [5:0] flag_ps2_color;
   flag_ps2 flag_ps2_inst(pix_x, pix_y, flag_ps2_color);
 
+  wire [5:0] flag_queer_color;
+  flag_queer flag_queer_inst(pix_x, pix_y, flag_queer_color);
+
+  wire [5:0] flag_trains_color;
+  flag_trains flag_trains_inst(pix_x, pix_y, flag_trains_color);
+
+  wire [5:0] flag_transfeminine_color;
+  flag_transfeminine flag_transfeminine_inst(pix_x, pix_y, flag_transfeminine_color);
+
+  wire [5:0] flag_transmasculine_color;
+  flag_transmasculine flag_transmasculine_inst(pix_x, pix_y, flag_transmasculine_color);
+
+  wire [5:0] flag_transneutral_color;
+  flag_transneutral flag_transneutral_inst(pix_x, pix_y, flag_transneutral_color);
+
+  wire [5:0] flag_trigender_color;
+  flag_trigender flag_trigender_inst(pix_x, pix_y, flag_trigender_color);
+
+  wire [5:0] flag_unlabeled_color;
+  flag_unlabeled flag_unlabeled_inst(pix_x, pix_y, flag_unlabeled_color);
+
+  wire [5:0] flag_uranic_color;
+  flag_uranic flag_uranic_inst(pix_x, pix_y, flag_uranic_color);
+
+  wire [5:0] flag_voidpunk_color;
+  flag_voidpunk flag_voidpunk_inst(pix_x, pix_y, flag_voidpunk_color);
+
   always @(selector) begin
     case (selector)
       8'd0: color = flag_rainbow_6_color;
@@ -300,10 +327,19 @@ module flag_index (
       8'd70: color = flag_pomosexual_color;
       8'd71: color = flag_proculsexual_color;
       8'd72: color = flag_ps2_color;
+      8'd73: color = flag_queer_color;
+      8'd74: color = flag_trains_color;
+      8'd75: color = flag_transfeminine_color;
+      8'd76: color = flag_transmasculine_color;
+      8'd77: color = flag_transneutral_color;
+      8'd78: color = flag_trigender_color;
+      8'd79: color = flag_unlabeled_color;
+      8'd80: color = flag_uranic_color;
+      8'd81: color = flag_voidpunk_color;
       default: color = 0;
     endcase
   end
 
-  assign count = 8'd73;
+  assign count = 8'd82;
 
 endmodule

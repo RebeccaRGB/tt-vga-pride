@@ -81,6 +81,15 @@ PROJECT_SOURCES += flag_polysexual.v
 PROJECT_SOURCES += flag_pomosexual.v
 PROJECT_SOURCES += flag_proculsexual.v
 PROJECT_SOURCES += flag_ps2.v
+PROJECT_SOURCES += flag_queer.v
+PROJECT_SOURCES += flag_trains.v
+PROJECT_SOURCES += flag_transfeminine.v
+PROJECT_SOURCES += flag_transmasculine.v
+PROJECT_SOURCES += flag_transneutral.v
+PROJECT_SOURCES += flag_trigender.v
+PROJECT_SOURCES += flag_unlabeled.v
+PROJECT_SOURCES += flag_uranic.v
+PROJECT_SOURCES += flag_voidpunk.v
 
 ifneq ($(GATES),yes)
 

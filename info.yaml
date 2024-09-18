@@ -93,6 +93,15 @@ project:
     - "flag_pomosexual.v"
     - "flag_proculsexual.v"
     - "flag_ps2.v"
+    - "flag_queer.v"
+    - "flag_trains.v"
+    - "flag_transfeminine.v"
+    - "flag_transmasculine.v"
+    - "flag_transneutral.v"
+    - "flag_trigender.v"
+    - "flag_unlabeled.v"
+    - "flag_uranic.v"
+    - "flag_voidpunk.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
