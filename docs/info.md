@@ -75,6 +75,20 @@ Connect to a VGA monitor. Set the following inputs to change the displayed flag:
 | 56    | Vincian MLM pride flag (light blue and light green)                  |
 | 57    | Multigender pride flag                                               |
 | 58    | Multisexual pride flag                                               |
+| 59    | Neptunic pride flag                                                  |
+| 60    | Neutrois pride flag                                                  |
+| 61    | Nonbinary pride flag                                                 |
+| 62    | Objectum pride flag                                                  |
+| 63    | Omnisexual pride flag                                                |
+| 64    | Pangender pride flag                                                 |
+| 65    | Pansexual pride flag                                                 |
+| 66    | Polyamory pride flag (blue, red, black with yellow pi)               |
+| 67    | Polyamory pride flag (blue, magenta, purple with yellow heart)       |
+| 68    | Polygender pride flag                                                |
+| 69    | Polysexual pride flag                                                |
+| 70    | Pomosexual pride flag                                                |
+| 71    | Proculsexual pride flag                                              |
+| 72    | IBM PS/2 pride flag                                                  |
 
 ## External hardware
 

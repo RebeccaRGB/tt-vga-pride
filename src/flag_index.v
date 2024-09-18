@@ -183,6 +183,48 @@ module flag_index (
   wire [5:0] flag_multisexual_color;
   flag_multisexual flag_multisexual_inst(pix_x, pix_y, flag_multisexual_color);
 
+  wire [5:0] flag_neptunic_color;
+  flag_neptunic flag_neptunic_inst(pix_x, pix_y, flag_neptunic_color);
+
+  wire [5:0] flag_neutrois_color;
+  flag_neutrois flag_neutrois_inst(pix_x, pix_y, flag_neutrois_color);
+
+  wire [5:0] flag_nonbinary_color;
+  flag_nonbinary flag_nonbinary_inst(pix_x, pix_y, flag_nonbinary_color);
+
+  wire [5:0] flag_objectum_color;
+  flag_objectum flag_objectum_inst(pix_x, pix_y, flag_objectum_color);
+
+  wire [5:0] flag_omnisexual_color;
+  flag_omnisexual flag_omnisexual_inst(pix_x, pix_y, flag_omnisexual_color);
+
+  wire [5:0] flag_pangender_color;
+  flag_pangender flag_pangender_inst(pix_x, pix_y, flag_pangender_color);
+
+  wire [5:0] flag_pansexual_color;
+  flag_pansexual flag_pansexual_inst(pix_x, pix_y, flag_pansexual_color);
+
+  wire [5:0] flag_poly_pi_color;
+  flag_poly_pi flag_poly_pi_inst(pix_x, pix_y, flag_poly_pi_color);
+
+  wire [5:0] flag_poly_tricolor_color;
+  flag_poly_tricolor flag_poly_tricolor_inst(pix_x, pix_y, flag_poly_tricolor_color);
+
+  wire [5:0] flag_polygender_color;
+  flag_polygender flag_polygender_inst(pix_x, pix_y, flag_polygender_color);
+
+  wire [5:0] flag_polysexual_color;
+  flag_polysexual flag_polysexual_inst(pix_x, pix_y, flag_polysexual_color);
+
+  wire [5:0] flag_pomosexual_color;
+  flag_pomosexual flag_pomosexual_inst(pix_x, pix_y, flag_pomosexual_color);
+
+  wire [5:0] flag_proculsexual_color;
+  flag_proculsexual flag_proculsexual_inst(pix_x, pix_y, flag_proculsexual_color);
+
+  wire [5:0] flag_ps2_color;
+  flag_ps2 flag_ps2_inst(pix_x, pix_y, flag_ps2_color);
+
   always @(selector) begin
     case (selector)
       8'd0: color = flag_rainbow_6_color;
@@ -244,10 +286,24 @@ module flag_index (
       8'd56: color = flag_mlm_vincian_v3_color;
       8'd57: color = flag_multigender_color;
       8'd58: color = flag_multisexual_color;
+      8'd59: color = flag_neptunic_color;
+      8'd60: color = flag_neutrois_color;
+      8'd61: color = flag_nonbinary_color;
+      8'd62: color = flag_objectum_color;
+      8'd63: color = flag_omnisexual_color;
+      8'd64: color = flag_pangender_color;
+      8'd65: color = flag_pansexual_color;
+      8'd66: color = flag_poly_pi_color;
+      8'd67: color = flag_poly_tricolor_color;
+      8'd68: color = flag_polygender_color;
+      8'd69: color = flag_polysexual_color;
+      8'd70: color = flag_pomosexual_color;
+      8'd71: color = flag_proculsexual_color;
+      8'd72: color = flag_ps2_color;
       default: color = 0;
     endcase
   end
 
-  assign count = 8'd59;
+  assign count = 8'd73;
 
 endmodule

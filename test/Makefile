@@ -67,6 +67,20 @@ PROJECT_SOURCES += flag_mlm_vincian_v2.v
 PROJECT_SOURCES += flag_mlm_vincian_v3.v
 PROJECT_SOURCES += flag_multigender.v
 PROJECT_SOURCES += flag_multisexual.v
+PROJECT_SOURCES += flag_neptunic.v
+PROJECT_SOURCES += flag_neutrois.v
+PROJECT_SOURCES += flag_nonbinary.v
+PROJECT_SOURCES += flag_objectum.v
+PROJECT_SOURCES += flag_omnisexual.v
+PROJECT_SOURCES += flag_pangender.v
+PROJECT_SOURCES += flag_pansexual.v
+PROJECT_SOURCES += flag_poly_pi.v
+PROJECT_SOURCES += flag_poly_tricolor.v
+PROJECT_SOURCES += flag_polygender.v
+PROJECT_SOURCES += flag_polysexual.v
+PROJECT_SOURCES += flag_pomosexual.v
+PROJECT_SOURCES += flag_proculsexual.v
+PROJECT_SOURCES += flag_ps2.v
 
 ifneq ($(GATES),yes)
 

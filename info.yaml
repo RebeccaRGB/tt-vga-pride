@@ -79,6 +79,20 @@ project:
     - "flag_mlm_vincian_v3.v"
     - "flag_multigender.v"
     - "flag_multisexual.v"
+    - "flag_neptunic.v"
+    - "flag_neutrois.v"
+    - "flag_nonbinary.v"
+    - "flag_objectum.v"
+    - "flag_omnisexual.v"
+    - "flag_pangender.v"
+    - "flag_pansexual.v"
+    - "flag_poly_pi.v"
+    - "flag_poly_tricolor.v"
+    - "flag_polygender.v"
+    - "flag_polysexual.v"
+    - "flag_pomosexual.v"
+    - "flag_proculsexual.v"
+    - "flag_ps2.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
