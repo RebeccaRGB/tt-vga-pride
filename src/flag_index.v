@@ -252,7 +252,7 @@ module flag_index (
   wire [5:0] flag_voidpunk_color;
   flag_voidpunk flag_voidpunk_inst(pix_x, pix_y, flag_voidpunk_color);
 
-  always @(selector) begin
+  always_comb begin
     case (selector)
       7'd0: color = flag_rainbow_6_color;
       7'd1: color = flag_rainbow_7_color;
