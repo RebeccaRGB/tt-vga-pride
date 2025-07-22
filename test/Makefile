@@ -90,6 +90,10 @@ PROJECT_SOURCES += flag_trigender.v
 PROJECT_SOURCES += flag_unlabeled.v
 PROJECT_SOURCES += flag_uranic.v
 PROJECT_SOURCES += flag_voidpunk.v
+PROJECT_SOURCES += flag_lesbian_butch_v1.v
+PROJECT_SOURCES += flag_lesbian_butch_v2.v
+PROJECT_SOURCES += flag_sapiosexual_v1.v
+PROJECT_SOURCES += flag_sapiosexual_v2.v
 
 ifneq ($(GATES),yes)
 

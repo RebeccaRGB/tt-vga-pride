@@ -936,6 +936,46 @@ module flag_voidpunk `FLAG;
   );
 endmodule
 
+module flag_lesbian_butch_v1 `FLAG;
+  assign color = (
+    pix_y < (480*1/7) ? `DITHER50(6'b000001,6'b010110) :
+    pix_y < (480*2/7) ? `DITHER50(6'b010110,6'b101011) :
+    pix_y < (480*3/7) ? `DITHER50(6'b101010,6'b101011) :
+    pix_y < (480*4/7) ? `WHITE :
+    pix_y < (480*5/7) ? `DITHER50(6'b101011,6'b111111) :
+    pix_y < (480*6/7) ? `DITHER50(6'b010111,6'b100111) :
+    `DITHER50(6'b010001,6'b010010)
+  );
+endmodule
+
+module flag_lesbian_butch_v2 `FLAG;
+  assign color = (
+    pix_y < (480*1/7) ? 6'b110100 :
+    pix_y < (480*2/7) ? `DITHER50(6'b110100,6'b111001) :
+    pix_y < (480*3/7) ? 6'b111001 :
+    pix_y < (480*4/7) ? `WHITE :
+    pix_y < (480*5/7) ? `DITHER50(6'b111001,6'b111110) :
+    pix_y < (480*6/7) ? 6'b111000 :
+    `DITHER50(6'b100100,6'b101000)
+  );
+endmodule
+
+module flag_sapiosexual_v1 `FLAG;
+  assign color = (
+    pix_y < (480*1/3) ? `DITHER50(6'b001000,6'b000100) :
+    pix_y < (480*2/3) ? `BROWN :
+    `BLUE
+  );
+endmodule
+
+module flag_sapiosexual_v2 `FLAG;
+  assign color = (
+    pix_y < (480*1/3) ? `DITHER50(6'b101011,6'b111111) :
+    pix_y < (480*2/3) ? `MAGENTA :
+    `LTBLUE
+  );
+endmodule
+
 // `define flag flag_voidpunk
 
 module flag_index (
@@ -1192,6 +1232,18 @@ module flag_index (
   wire [5:0] flag_voidpunk_color;
   flag_voidpunk flag_voidpunk_inst(pix_x, pix_y, flag_voidpunk_color);
 
+  wire [5:0] flag_lesbian_butch_v1_color;
+  flag_lesbian_butch_v1 flag_lesbian_butch_v1_inst(pix_x, pix_y, flag_lesbian_butch_v1_color);
+
+  wire [5:0] flag_lesbian_butch_v2_color;
+  flag_lesbian_butch_v2 flag_lesbian_butch_v2_inst(pix_x, pix_y, flag_lesbian_butch_v2_color);
+
+  wire [5:0] flag_sapiosexual_v1_color;
+  flag_sapiosexual_v1 flag_sapiosexual_v1_inst(pix_x, pix_y, flag_sapiosexual_v1_color);
+
+  wire [5:0] flag_sapiosexual_v2_color;
+  flag_sapiosexual_v2 flag_sapiosexual_v2_inst(pix_x, pix_y, flag_sapiosexual_v2_color);
+
   always_comb begin
     case (selector)
       7'd0: color = flag_rainbow_6_color;
@@ -1276,11 +1328,15 @@ module flag_index (
       7'd79: color = flag_unlabeled_color;
       7'd80: color = flag_uranic_color;
       7'd81: color = flag_voidpunk_color;
+      7'd82: color = flag_lesbian_butch_v1_color;
+      7'd83: color = flag_lesbian_butch_v2_color;
+      7'd84: color = flag_sapiosexual_v1_color;
+      7'd85: color = flag_sapiosexual_v2_color;
       default: color = 0;
     endcase
   end
 
-  assign max = 7'd81;
+  assign max = 7'd85;
 
 endmodule
 

@@ -252,6 +252,18 @@ module flag_index (
   wire [5:0] flag_voidpunk_color;
   flag_voidpunk flag_voidpunk_inst(pix_x, pix_y, flag_voidpunk_color);
 
+  wire [5:0] flag_lesbian_butch_v1_color;
+  flag_lesbian_butch_v1 flag_lesbian_butch_v1_inst(pix_x, pix_y, flag_lesbian_butch_v1_color);
+
+  wire [5:0] flag_lesbian_butch_v2_color;
+  flag_lesbian_butch_v2 flag_lesbian_butch_v2_inst(pix_x, pix_y, flag_lesbian_butch_v2_color);
+
+  wire [5:0] flag_sapiosexual_v1_color;
+  flag_sapiosexual_v1 flag_sapiosexual_v1_inst(pix_x, pix_y, flag_sapiosexual_v1_color);
+
+  wire [5:0] flag_sapiosexual_v2_color;
+  flag_sapiosexual_v2 flag_sapiosexual_v2_inst(pix_x, pix_y, flag_sapiosexual_v2_color);
+
   always_comb begin
     case (selector)
       7'd0: color = flag_rainbow_6_color;
@@ -336,10 +348,14 @@ module flag_index (
       7'd79: color = flag_unlabeled_color;
       7'd80: color = flag_uranic_color;
       7'd81: color = flag_voidpunk_color;
+      7'd82: color = flag_lesbian_butch_v1_color;
+      7'd83: color = flag_lesbian_butch_v2_color;
+      7'd84: color = flag_sapiosexual_v1_color;
+      7'd85: color = flag_sapiosexual_v2_color;
       default: color = 0;
     endcase
   end
 
-  assign max = 7'd81;
+  assign max = 7'd85;
 
 endmodule
