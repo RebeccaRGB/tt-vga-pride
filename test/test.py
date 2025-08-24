@@ -102,13 +102,10 @@ async def test_project(dut):
 
     os.makedirs("output", exist_ok=True)
 
-    dut.ui_in.value = 1
-    dut.uio_in.value = 0
     frame = await capture_frame(0)
     frame.save(f"output/frame0.png")
 
-    dut.ui_in.value = 1
-    dut.uio_in.value = 1
+    dut.ui_in.value = 64
     frame = await capture_frame(1)
     frame.save(f"output/frame1.png")
 
@@ -117,7 +114,6 @@ async def test_project(dut):
     frame = await capture_frame(2)
     frame.save(f"output/frame2.png")
 
-    dut.ui_in.value = 1
     dut.uio_in.value = 7
     frame = await capture_frame(3)
     frame.save(f"output/frame3.png")
