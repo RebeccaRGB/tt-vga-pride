@@ -51,7 +51,9 @@ module tt_um_rebeccargb_vga_pride (
   wire [6:0] max;
   wire counter_clk = |ui_in[7:4];
   always @(posedge counter_clk, negedge rst_n) begin
-    if (ui_in[7] | ~rst_n) begin
+    if (~rst_n) begin
+      counter <= 0;
+    end else if (ui_in[7]) begin
       counter <= 0;
     end else if (ui_in[6]) begin
       counter <= (counter < max) ? (counter + 1) : 0;
