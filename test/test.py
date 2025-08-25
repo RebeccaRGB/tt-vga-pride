@@ -106,30 +106,30 @@ async def test_project(dut):
     frame.save(f"output/frame0.png")
 
     dut.ui_in.value = 64
-    await ClockCycles(dut.clk, 10)
+    await ClockCycles(dut.clk, 1)
     dut.ui_in.value = 0
-    await ClockCycles(dut.clk, 10)
-    await skip_frame(1, 20)
+    await ClockCycles(dut.clk, 1)
+    await skip_frame(1, 2)
 
     frame = await capture_frame(1)
     frame.save(f"output/frame1.png")
 
     dut.uio_in.value = 4
-    await ClockCycles(dut.clk, 10)
+    await ClockCycles(dut.clk, 1)
     dut.ui_in.value = 16
-    await ClockCycles(dut.clk, 10)
+    await ClockCycles(dut.clk, 1)
     dut.ui_in.value = 0
-    await ClockCycles(dut.clk, 10)
-    await skip_frame(2, 30)
+    await ClockCycles(dut.clk, 1)
+    await skip_frame(2, 3)
 
     frame = await capture_frame(2)
     frame.save(f"output/frame2.png")
 
     dut.uio_in.value = 7
-    await ClockCycles(dut.clk, 10)
+    await ClockCycles(dut.clk, 1)
     dut.ui_in.value = 1
-    await ClockCycles(dut.clk, 10)
-    await skip_frame(3, 20)
+    await ClockCycles(dut.clk, 1)
+    await skip_frame(3, 2)
 
     frame = await capture_frame(3)
     frame.save(f"output/frame3.png")
