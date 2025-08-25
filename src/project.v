@@ -53,14 +53,16 @@ module tt_um_rebeccargb_vga_pride (
   always @(posedge counter_clk, negedge rst_n) begin
     if (~rst_n) begin
       counter <= 0;
-    end else if (ui_in[7]) begin
-      counter <= 0;
-    end else if (ui_in[6]) begin
-      counter <= (counter < max) ? (counter + 1) : 0;
-    end else if (ui_in[5]) begin
-      counter <= (counter > 0) ? (counter - 1) : max;
-    end else if (ui_in[4]) begin
-      counter <= uio_in[6:0];
+    end else if (counter_clk) begin
+      if (ui_in[7]) begin
+        counter <= 0;
+      end else if (ui_in[6]) begin
+        counter <= (counter < max) ? (counter + 1) : 0;
+      end else if (ui_in[5]) begin
+        counter <= (counter > 0) ? (counter - 1) : max;
+      end else if (ui_in[4]) begin
+        counter <= uio_in[6:0];
+      end
     end
   end
 
