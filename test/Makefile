@@ -94,6 +94,7 @@ PROJECT_SOURCES += flag_lesbian_butch_v1.v
 PROJECT_SOURCES += flag_lesbian_butch_v2.v
 PROJECT_SOURCES += flag_sapiosexual_v1.v
 PROJECT_SOURCES += flag_sapiosexual_v2.v
+PROJECT_SOURCES += cool_crab_rom.v
 
 ifneq ($(GATES),yes)
 

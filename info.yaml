@@ -106,13 +106,14 @@ project:
     - "flag_lesbian_butch_v2.v"
     - "flag_sapiosexual_v1.v"
     - "flag_sapiosexual_v2.v"
+    - "cool_crab_rom.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
   ui[0]: "address mode"
-  ui[1]: ""
+  ui[1]: "cool crab"
   ui[2]: ""
   ui[3]: ""
   ui[4]: "set"

@@ -78,9 +78,13 @@ module tt_um_rebeccargb_vga_pride (
     end
   end
 
-  wire [5:0] color;
-  flag_index flag((ui_in[0] ? uio_in[6:0] : counter), pix_x, pix_y[8:0], color, max);
+  wire [5:0] flag_color;
+  flag_index flag((ui_in[0] ? uio_in[6:0] : counter), pix_x, pix_y[8:0], flag_color, max);
 
+  wire [6:0] crab_color;
+  cool_crab_rom crab(pix_x, pix_y[8:0], crab_color);
+
+  wire [5:0] color = (ui_in[1] & crab_color[6]) ? crab_color[5:0] : flag_color;
   assign R = video_active ? color[5:4] : 2'b00;
   assign G = video_active ? color[3:2] : 2'b00;
   assign B = video_active ? color[1:0] : 2'b00;

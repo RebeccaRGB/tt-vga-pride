@@ -134,6 +134,13 @@ async def test_project(dut):
     frame = await capture_frame(3)
     frame.save(f"output/frame3.png")
 
+    dut.ui_in.value = 3
+    await ClockCycles(dut.clk, 1)
+    await skip_frame(4, 1)
+
+    frame = await capture_frame(4)
+    frame.save(f"output/frame4.png")
+
 
 @cocotb.test()
 async def compare_reference(dut):
