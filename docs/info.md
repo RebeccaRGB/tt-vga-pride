@@ -13,6 +13,7 @@ Connect to a VGA monitor. Set the following inputs to change the displayed flag:
 - `ui_in[6]` to display the next flag
 - `ui_in[5]` to display the previous flag
 - `ui_in[4]` to display the flag whose index is on `uio_in`
+- `ui_in[1]` to add a cool crab
 
 | Index | Flag                                                                 |
 | ----- | -------------------------------------------------------------------- |
